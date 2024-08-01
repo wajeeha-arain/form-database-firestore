@@ -48,7 +48,7 @@ const logout = (e)=>{
       
 
 
-}
+
 const unsubscribe = firebase.auth().onAuthStateChanged( (user) => {
     if (user) {
         getuserinfoRealtimes(user.uid)
@@ -61,5 +61,5 @@ const unsubscribe = firebase.auth().onAuthStateChanged( (user) => {
 
     }
   })
-
+}
 ;
