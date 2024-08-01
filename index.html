@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <p> <a href="./home.html"></a>Logo</p>
+        </div>
+        <div class="right-links">
+           
+            <a href="./index.html">login</a>
+            <a href="./register.html">registration</a>
+            <a href="./edit.html">Change Profile</a>
+            <a href="./register.html"><button class="btn"  style=" height: 39px; width: 120px;">logOut</button></a>
+        </div>
+    </div>
+
+    <!-- <div >
+        <h1>any-thing</h1>
+        <div class="userdetail"></div>
+    </div>  
+       -->
+    <!-- <div id="model">
+        <h2></h2>
+        <form id="editsprofile" onsubmit="userupdata(event)">
+          
+            <input type="name" name="name" placeholder="name"> <br> <br>
+            <input type="email" name="profileemail" placeholder="enter your email" required><br> <br>
+               <input type="gender" name="gender " placeholder="gender">  -->
+            <!-- <input type="phone" name="phone" placeholder="number"> <br> <br>
+            <input type=" course" name="course" placeholder=" course"><br> <br>
+            <input type="protfoliourl" name="protfoliourl" placeholder="  protfoliourl"><br> <br>
+            <input type="experience" name="experience" placeholder="experience"><br> <br>
+              <button> added</button>
+       
+        </form>
+    </div> --> 
+
+ <div class="container">
+    <div class="box form-box">
+        <header>Sign Up</header>
+        <form onsubmit="sigin(event)">
+            <div class="field input">
+                <label for="email">email
+                    <input type="email" name="email" id="email" required>
+                </label>
+            </div>
+
+            <div class="field  input">
+                <label for="password">password
+                    <input type="password" name="password" id="password" required>
+                </label>
+            </div>
+
+            <div class="field ">
+            
+                    <input type="submit" class="btn" name="submit" value="signIn" required>
+       
+            </div>
+
+            <div class="link">
+                Don't have account? <a href="./register.html">LogIn Now</a> 
+            
+
+            </div>
+        </form>
+    </div>
+ </div>
+
+ <script src="./firebase_db.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+
+ <script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyD13-TEqlM9Qzf3T1jfIUdius6p0qH57-E",
+    authDomain: "registration-app-5c07f.firebaseapp.com",
+    projectId: "registration-app-5c07f",
+    storageBucket: "registration-app-5c07f.appspot.com",
+    messagingSenderId: "1092497716584",
+    appId: "1:1092497716584:web:a6c68910cc6185f8afd2dd"
+  };
+firebase.initializeApp(firebaseConfig);
+ </script>
+    
+</body>
+</html>

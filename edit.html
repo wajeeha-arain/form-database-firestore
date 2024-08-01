@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Profile</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <p> <a href="./home.html">Logo</a></p>
+        </div>
+        <div class="right-links">
+           
+            <a href="./index.html">login</a>
+            <a href="./register.html">registration</a>
+            <a href="#">Change Profile</a>
+            <a href="#"><button class="btn" onclick="logout(event)"  style=" height: 39px; width: 120px;">logOut</button></a>
+        </div>
+    </div>
+
+
+    <div class="container" style="margin-left: -700px; margin-top: 40px; " >
+        <div class="box form-box">
+        <h1 style="margin-bottom: 20px;">Change Profile</h1>
+
+        <img src="./yy.jpg" id="propic" style="border-radius: 50%; margin-bottom: 10px;" height="120px" width="120px" alt="">
+        <input type="file"  accept="image/*" onchange="uploading(event)"  >
+        <div class="userdetail"></div>
+        </div>
+    </div>
+
+
+
+
+     <div class="container" style="margin-left: 300px; margin-top: -550px;">
+        <div class="box form-box">
+            <header>Change Profile</header>
+    
+
+
+
+            <div id="model">
+                <!-- <h2 style="margin-top: 10px; margin-bottom: 20px; align-items: center;">Change Profile</h2> -->
+                <div class="field input">
+                    <form id="editsprofile" onsubmit="userupdata(event)">
+                     
+        
+                       <div class="field input">
+                           <label for="email">name
+                               <input type="name" name="name" placeholder="name">
+                           </label>
+                       </div>
+                     
+                       <div class="field input">
+                           <label for="email">email
+                               <input type="email" name="profileemail" placeholder="enter your email" required>
+                           </label>
+                       </div>
+                       <div class="field input">
+                           <label for="email">phone
+                               <input type="phone" name="phone" placeholder="number">
+                           </label>
+                       </div>
+                       <div class="field input">
+                           <label for="text">course
+                               <input type=" course" name="course" placeholder=" course">
+                           </label>
+                       </div>
+                       <div class="field input">
+                           <label for="tex">protfoliourl
+                               <input type="protfoliourl" name="protfoliourl" placeholder="  protfoliourl">
+                           </label>
+                       </div>
+                       <div class="field input">
+                           <label for="text">experience
+                               <input type="experience" name="experience" placeholder="experience"><br> <br>
+                           </label>
+                       </div>
+                       <div class="field " style="margin-top: -15px;">
+                
+                        <input type="submit" class="btn" name="submit" value="Added" required>
+                       
+           
+                </div>
+               
+                </form>
+            </div>
+        </div>
+        </div>
+
+            <!-- <form action="">
+                <div class="field input">
+                    <label for="username">username
+                        <input type="usernmae" name="username" id="username" required>
+                    </label>
+                </div>
+    
+                <div class="field  input">
+                    <label for="email">email
+                        <input type="password" name="email" id="email" required>
+                    </label>
+                </div>
+    
+           
+    
+                <div class="field  input">
+                    <label for="phonenumber">phone number
+                        <input type="phonenumber" name="phonenumber" id="phonenumber" required>
+                    </label>
+                </div>
+    
+                <div class="field ">
+                
+                        <input type="submit" class="btn" name="submit" value="updata" required>
+           
+                </div>
+    
+            </form> -->
+        </div> 
+     </div>
+
+     <script src="./firebase_db.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+    
+     <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyD13-TEqlM9Qzf3T1jfIUdius6p0qH57-E",
+        authDomain: "registration-app-5c07f.firebaseapp.com",
+        projectId: "registration-app-5c07f",
+        storageBucket: "registration-app-5c07f.appspot.com",
+        messagingSenderId: "1092497716584",
+        appId: "1:1092497716584:web:a6c68910cc6185f8afd2dd"
+      };
+    firebase.initializeApp(firebaseConfig);
+     </script>
+</body>
+</html>
